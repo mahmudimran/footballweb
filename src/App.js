@@ -3,6 +3,8 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import League from './components/League/League';
 
+
+
 function App() {
   const [leagues,setLeagues ] = useState([])
   useEffect(()=>{
@@ -14,9 +16,9 @@ function App() {
   return (
     
     <div className="App">
-      <h3>Leagues {leagues.length}</h3>
+      <h3>leagues Count {leagues.length}</h3>
       {
-        leagues.map(league=><League league={league}></League>)
+        leagues.map(league=> <League league={league}></League>)
       }
     </div>
   );
