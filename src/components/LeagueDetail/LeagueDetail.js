@@ -17,7 +17,7 @@ const LeagueDetail = () => {
         fetch(url)
         .then(res=>res.json())
         .then(data=>setLeague(data.leagues[0]))
-    }, [])
+    }, [leagueId])
 
     return (
         <div style={{backgroundColor:'rgb(32 32 61)'}}>
@@ -34,13 +34,13 @@ const LeagueDetail = () => {
                         <Col lg={6}>
                             <h4 className="mt-4"> {strLeague}</h4>
                             <h6><FontAwesomeIcon icon={faPodcast} /> Founded : {intFormedYear}</h6>
-                            <h6><FontAwesomeIcon icon={faFlag} /> Country : {strLeague,strCountry}</h6>
+                            <h6><FontAwesomeIcon icon={faFlag} /> Country : {strCountry}</h6>
                             <h6><FontAwesomeIcon icon={faFutbol} /> Sport Type : {strSport}</h6>
                             <h6><FontAwesomeIcon icon={faMars} /> Gender: {strGender}</h6>
                         </Col>
                         <Col lg={6}>  
                             { 
-                              strGender === 'Male'? <img src ={maleImg }  width="500"  height="300" /> :<img src ={femaleImg}  width="500"  height="300" />
+                              strGender === 'Male'? <img src ={maleImg }  width="500"  height="300" alt= "maleImg" /> :<img src ={femaleImg}  width="500"  height="300" alt= "femaleImg" />
                             } 
                         </Col> 
                     </Row>
@@ -49,10 +49,11 @@ const LeagueDetail = () => {
                 <p className="text-white">Description <br /> {strDescriptionEN}</p>
                 
                 <div className="social-connect py-4 text-center">
-                    <a className="facebook" href="https://www.facebook.com/MLS" target="_blank" rel=""><FontAwesomeIcon icon={faFacebook}/></a>
-                    <a className="twitter" href="http://twitter.com/mls" target="_blank" rel=""><FontAwesomeIcon icon={faTwitter} /></a>
-                    <a className="website" href="https://www.mlssoccer.com/" target="_blank" rel=""><FontAwesomeIcon icon={faGlobe} /></a>
-                    <a className="youtube" href="http://youtube.com/user/mls" target="_blank" rel=""><FontAwesomeIcon icon={faYoutube} /></a>
+                    <a className="facebook" href="https://www.facebook.com/MLS" target="_blank" ><FontAwesomeIcon icon={faFacebook}/></a>
+                    <a className="twitter" href="http://twitter.com/mls" target="_blank"><FontAwesomeIcon icon={faTwitter} /></a>
+                    <a className="website" href="https://www.mlssoccer.com/" target="_blank" ><FontAwesomeIcon icon={faGlobe} /></a>
+                    <a className="youtube" href="http://youtube.com/user/mls" target="_blank" ><FontAwesomeIcon icon={faYoutube} /></a>
+                    
                 </div>
             
             </Container>
