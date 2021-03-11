@@ -48,11 +48,11 @@ const LeagueDetail = () => {
                 <br></br>
                 <p className="text-white">Description <br /> {strDescriptionEN}</p>
                 
-                <div className="social-connect py-4 text-center">
-                    <a className="facebook" href="https://www.facebook.com/MLS" target="_blank" ><FontAwesomeIcon icon={faFacebook}/></a>
-                    <a className="twitter" href="http://twitter.com/mls" target="_blank"><FontAwesomeIcon icon={faTwitter} /></a>
-                    <a className="website" href="https://www.mlssoccer.com/" target="_blank" ><FontAwesomeIcon icon={faGlobe} /></a>
-                    <a className="youtube" href="http://youtube.com/user/mls" target="_blank" ><FontAwesomeIcon icon={faYoutube} /></a>
+                <div className="social-connect py-4 text-center"> 
+                    <a className="facebook" href="https://www.facebook.com/MLS" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebook}/></a>
+                    <a className="twitter" href="http://twitter.com/mls" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} /></a>
+                    <a className="website" href="https://www.mlssoccer.com/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGlobe} /></a>
+                    <a className="youtube" href="http://youtube.com/user/mls" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faYoutube} /></a>
                     
                 </div>
             
